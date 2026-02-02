@@ -18,9 +18,24 @@ const person = {
 person.age = 25
 console.log(person)
 
-function sum(num1, num2){
+function sum(num1, num2=0){
     const total = num1 + num2
     console.log(total)
 }
 
-sum(10, 15)
+// sum(10,5, 3 ,8)
+
+function multiply(num1=1, num2=1){
+    const total = num1 * num2
+    console.log(total)
+}
+
+// multiply(3,4)
+
+function templateString(num1, num2){
+    const result = num1 * num2
+    const output = `sum of ${num1} and ${num2} is ${result}`
+    console.log(output)
+}
+
+templateString(5,10)
