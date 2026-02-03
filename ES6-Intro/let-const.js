@@ -4,7 +4,7 @@ console.log(Newname)
 
 let price = 25
 price = 30
-console.log(price)
+// console.log(price)
 
 const students = ["Rahat, Shakil, Rafiq"]
 students.push("Hadi")
@@ -38,4 +38,32 @@ function templateString(num1, num2){
     console.log(output)
 }
 
-templateString(5,10)
+// templateString(5,10)
+
+// function decleration
+function sum(num1, num2){
+    return num1 + num2
+}
+
+// console.log(sum(5, 10))
+
+// function expression
+const addition = function(num1, num2){
+    return num1 + num2
+}
+
+const result = addition(4, 6)
+// console.log(result)
+
+// arrow function
+const additin2 = (num1, num2) => {
+    return num1 + num2
+}
+
+const result2 = additin2(7, 4)
+// console.log(result2)
+
+
+const isBig = (x, y) => x > y 
+const isBigresult = isBig(3,2)
+console.log(isBigresult)
