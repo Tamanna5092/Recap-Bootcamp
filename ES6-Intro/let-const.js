@@ -66,4 +66,19 @@ const result2 = additin2(7, 4)
 
 const isBig = (x, y) => x > y 
 const isBigresult = isBig(3,2)
-console.log(isBigresult)
+// console.log(isBigresult)
+
+// annymouns function
+// document.getElementById("").addEventListener("click", ()=>{
+// })
+// document.getElementById("btn-click").addEventListener("click", event => {
+//     console.log("button clicked")
+// })
+
+const numbers = [2, 4, 6, 8, 10]
+console.log(numbers)
+console.log(Math.max(numbers))
+console.log(...numbers)
+console.log(Math.max(...numbers))
+const newNumbers = [1, ...numbers, 12, 14]
+console.log(newNumbers)
