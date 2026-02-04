@@ -29,3 +29,27 @@ console.log(first, second, third);
 const marks = [65, 75, 85, 95, 70];
 const [math, physics, chemistry, biology, english] = marks;
 console.log(chemistry)
+
+
+// key value pair
+const employee = {
+    id: 101,
+    name: "Rahat",
+    designation: "Developer",
+    salary: 50000,
+    company: "Tech Ltd"
+}
+const keys = Object.keys(employee);
+const values = Object.values(employee);
+const entries = Object.entries(employee);
+console.log(keys);
+console.log(values);
+console.log(entries);
+
+// Object.freeze(employee); ------- update or delete korte parbe na
+// Object.seal(employee); ------- update korte parbe, delete korte parbe na
+delete employee.salary;
+delete employee.company;
+employee.salary = employee.salary + 10000;
+employee.company = "Global Tech Ltd";
+console.log(employee);
