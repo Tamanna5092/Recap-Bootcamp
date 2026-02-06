@@ -1,4 +1,5 @@
 const numbers= [1, 2, 3, 4, 5]
+// if we want output or return a new array then use map method. It is used to create a new array.
 const double = []
 for(const num of numbers){
     const result = num * 2
