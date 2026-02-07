@@ -25,3 +25,7 @@ console.log(sum)
 // using reduce method
 const total = numbers.reduce((acc, curr) => acc + curr, 0)
 console.log(total)
+
+const nums = [1,2,3,4,5];
+const output = nums.filter(n => n%2);
+console.log(output);
