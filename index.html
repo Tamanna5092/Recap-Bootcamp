@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #post-container {
+        max-width: 1160px;
+        margin: 40px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+        row-gap: 36px;
+    }
+    .post-card {
+        height: 100%;
+        border: 1px solid #ccc;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 1px 1px gray;
+    }
+    .post-card p {
+        text-align: justify;
+    }
+</style>
+
 <body>
-    <button onclick="loadData()">Load Data</button>
-    <button onclick="loadPost()">Load Data</button>
-    <ul id="post-container"></ul>
+    <button onclick="loadTodos()">Load Todos</button>
+    <button onclick="loadPost()">Load Posts</button>
+    <div id="post-container">
+        
+    </div>
+
+    <div id="todo-container">
+
+    </div>
 
     <script src="./Api-Concept/fetch.js"></script>
 </body>
+
 </html>
