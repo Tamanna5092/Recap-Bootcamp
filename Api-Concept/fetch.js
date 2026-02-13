@@ -25,6 +25,7 @@ const loadTodos = () => {
     })
 }
 
+
 // array of object
 const displayData = (posts) => {
   // 1. Get the container and clear the container
@@ -47,18 +48,21 @@ const displayData = (posts) => {
 };
 
 const displayTodos = (todos) => {
-    // get the container and clear the container
+    // 1. get the container and clear the container
     const todoContainer = document.getElementById("todo-container");
     todoContainer.innerHTML = "";
     console.log(todoContainer);
     console.log("Display Todos", todos);
+    // array of object map
     todos.forEach(todo => {
-        const div = document.createElement("div");
-        div.innerHTML = `<div class="todo-card">
+        // 2.create HTML element
+        const todoCard = document.createElement("div");
+        todoCard.innerHTML = `<div class="todo-card">
             <h3>${todo.title}</h3>
-            <p>Status: ${todo.completed ? "Completed" : "Pending"}</p>
+            <p>Status: ${todo.completed == true ? '<i class="fa-regular fa-square-check"></i>' : '<i class="fa-solid fa-square-xmark"></i>'}</p>
         </div>`;
-        todoContainer.appendChild(div);
+        // 3.add div inside the container
+        todoContainer.append(todoCard);
     });
 }
 
