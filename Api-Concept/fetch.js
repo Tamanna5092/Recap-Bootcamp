@@ -19,9 +19,19 @@ const loadPost = () => {
     })
 }
 
+// array of object
 const displayData = (posts) => {
+    // 1. Get the container
+    const postContainer = document.getElementById("post-container");
+    console.log(postContainer);
     console.log("Display Data", posts);
     posts.forEach(post => {
-        console.log(post);
+        // console.log(post.title);
+        // 2. create HTML element
+        const li = document.createElement("li");
+        li.innerText = post.title;
+        // 3. add li inside the container
+        postContainer.appendChild(li);
+        console.log(li);
     })
 }
