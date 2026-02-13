@@ -3,7 +3,8 @@ const person = {
     age: 30,
     email: "john.doe@example.com",
     country: "USA",
-    occupation: "Software Engineer"
+    occupation: "Software Engineer",
+    hobby: ["coding", "hiking", "photography", "travel"]
 }
 
 console.log(person, typeof person);
