@@ -14,6 +14,17 @@ const loadPost = () => {
     });
 };
 
+// todos
+const loadTodos = () => {
+    const url = "https://jsonplaceholder.typicode.com/todos";
+    fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        displayTodos(data);
+    })
+}
+
 // array of object
 const displayData = (posts) => {
   // 1. Get the container and clear the container
@@ -34,6 +45,22 @@ const displayData = (posts) => {
     console.log(div);
   });
 };
+
+const displayTodos = (todos) => {
+    // get the container and clear the container
+    const todoContainer = document.getElementById("todo-container");
+    todoContainer.innerHTML = "";
+    console.log(todoContainer);
+    console.log("Display Todos", todos);
+    todos.forEach(todo => {
+        const div = document.createElement("div");
+        div.innerHTML = `<div class="todo-card">
+            <h3>${todo.title}</h3>
+            <p>Status: ${todo.completed ? "Completed" : "Pending"}</p>
+        </div>`;
+        todoContainer.appendChild(div);
+    });
+}
 
 // show default post
 // loadPost()
