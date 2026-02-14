@@ -5,42 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-    #post-container, #todo-container {
-        max-width: 1160px;
-        margin: 40px auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 24px;
-        row-gap: 36px;
-    }
-    .post-card, .todo-card {
-        height: 100%;
-        border: 1px solid #ccc;
-        padding: 16px;
-        border-radius: 8px;
-        box-shadow: 1px 1px 1px 1px gray;
-    }
-    .post-card p {
-        text-align: justify;
-    }
-    .todo-card{
-     border: 1px solid #860e0e;
-    }
-</style>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <button onclick="loadPost()">Load Posts</button>
     <button onclick="loadTodos()">Load Todos</button>
+    <button onclick="loadUsers()">Load Users</button>
     <div id="post-container">
-        
+
     </div>
 
     <h1>All Todos</h1>
     <div id="todo-container">
 
+    </div>
+
+    <div id="users-container">
+        
     </div>
 
     <script src="./Api-Concept/fetch.js"></script>

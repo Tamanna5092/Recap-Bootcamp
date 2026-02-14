@@ -1,0 +1,28 @@
+ #post-container,
+ #todo-container,
+ #user-container {
+     max-width: 1160px;
+     margin: 40px auto;
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-gap: 24px;
+     row-gap: 36px;
+ }
+
+ .post-card,
+ .todo-card,
+ .user-info {
+     height: 100%;
+     border: 1px solid #ccc;
+     padding: 16px;
+     border-radius: 8px;
+     box-shadow: 1px 1px 1px 1px gray;
+ }
+
+ .post-card p {
+     text-align: justify;
+ }
+
+ .todo-card {
+     border: 1px solid #860e0e;
+ }
