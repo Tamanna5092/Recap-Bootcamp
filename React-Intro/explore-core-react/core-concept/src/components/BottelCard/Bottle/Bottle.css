@@ -1,0 +1,10 @@
+.bottle-card {
+    padding: 16px;
+    border: 2px solid khaki;
+    border-radius: 24px;
+}
+
+.bottle-card img {
+    width: 300px;
+    border-radius: 24px 24px 0 0;
+}

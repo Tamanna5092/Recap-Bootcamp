@@ -6,6 +6,7 @@ import Counter from "./counter/Counter";
 import Rendering from "./rendering/Rendering";
 import Users from "./fetching/Users";
 import Countries from "./components/countries/Countries";
+import Bottles from "./components/BottelCard/Bottles/Bottles";
 
 // const fetchUser = fetch("https://jsonplaceholder.typicode.com/users").then(
 //   (res) => res.json(),
@@ -16,8 +17,11 @@ import Countries from "./components/countries/Countries";
 //   return res.json();
 // };
 
-const countriesPromise = fetch("https://openapi.programming-hero.com/api/all")
-  .then(res => res.json());
+// const countriesPromise = fetch("https://openapi.programming-hero.com/api/all")
+//   .then(res => res.json());
+
+    const bottlesPromise = fetch('./../public/bottle.json')
+    .then(res => res.json())
 
 function App() {
   // const fetchPromise = fetchFrinds();
@@ -29,8 +33,11 @@ function App() {
       <Suspense fallback={<p>Users Data Loading Please Wait...</p>}>
         <Users></Users>
       </Suspense> */}
-      <Suspense fallback={<p>Country data loading</p>}>
+      {/* <Suspense fallback={<p>Country data loading</p>}>
         <Countries countriesPromise={countriesPromise}></Countries>
+      </Suspense> */}
+      <Suspense fallback={<p>All Bottles Are Here Coming Soon...</p>}>
+        <Bottles bottlesPromise={bottlesPromise}></Bottles>
       </Suspense>
       {/* <Suspense fallback={<h3>Loading...</h3>}>
         <User fetchUser={fetchUser}></User>
