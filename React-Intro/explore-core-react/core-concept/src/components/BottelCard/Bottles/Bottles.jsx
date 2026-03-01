@@ -1,11 +1,11 @@
-import { use, useEffect } from "react";
-import Bottle from "../Bottle/Bottle";
-import "./Bottles.css";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import {
   addItemToCartLocalStorage,
   getCartFromLocalStorage,
 } from "../../utilities/localStorage";
+import Bottle from "../Bottle/Bottle";
+import Carts from "../CartInfo/Carts/Carts";
+import "./Bottles.css";
 
 export default function Bottles({ bottlesPromise }) {
   const [cart, setCart] = useState([]);
@@ -37,6 +37,7 @@ export default function Bottles({ bottlesPromise }) {
     <div>
       <h1>Buy Awsome Watter Bottle: {bottles.length}</h1>
       <h3>Cart: {cart.length}</h3>
+      <Carts cart={cart}></Carts>
       <div className="bottles-container">
         {bottles.map((bottle) => (
           <Bottle
