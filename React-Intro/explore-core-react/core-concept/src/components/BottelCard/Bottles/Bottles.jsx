@@ -2,6 +2,7 @@ import { use, useEffect, useState } from "react";
 import {
   addItemToCartLocalStorage,
   getCartFromLocalStorage,
+  removeItemFromCartLocalStorage,
 } from "../../utilities/localStorage";
 import Bottle from "../Bottle/Bottle";
 import Carts from "../CartInfo/Carts/Carts";
@@ -33,11 +34,18 @@ export default function Bottles({ bottlesPromise }) {
     addItemToCartLocalStorage(bottle.id);
   };
 
+  const handleRemoveItemFromCart = (id) => {
+    console.log('Item remove from the cart', id)
+    const reaminingCart = cart.filter(item => item.id !== id);
+    setCart(reaminingCart);
+    removeItemFromCartLocalStorage(id)
+  }
+
   return (
     <div>
       <h1>Buy Awsome Watter Bottle: {bottles.length}</h1>
       <h3>Cart: {cart.length}</h3>
-      <Carts cart={cart}></Carts>
+      <Carts cart={cart} handleRemoveItemFromCart={handleRemoveItemFromCart}></Carts>
       <div className="bottles-container">
         {bottles.map((bottle) => (
           <Bottle
